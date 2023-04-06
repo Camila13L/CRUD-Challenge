@@ -22,6 +22,14 @@
     <None Remove="Behaviours\" />
     <None Remove="Mappings\" />
     <None Remove="Wrappers\" />
+    <None Remove="Features\TEDTalks\" />
+    <None Remove="Features\TEDTalks\Commands\" />
+    <None Remove="Features\TEDTalks\Queries\" />
+    <None Remove="Features\TEDTalks\Commands\CreateTEDTalkCommand\" />
+    <None Remove="Features\TEDTalks\Commands\UpdateTEDTalkCommand\" />
+    <None Remove="Features\TEDTalks\Commands\DeleteTEDTalkCommand\" />
+    <None Remove="Features\TEDTalks\Queries\GetAllTEDTalks\" />
+    <None Remove="Features\TEDTalks\Queries\GetTEDTalkById\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTOs\" />
@@ -32,5 +40,16 @@
     <Folder Include="Behaviours\" />
     <Folder Include="Mappings\" />
     <Folder Include="Wrappers\" />
+    <Folder Include="Features\TEDTalks\" />
+    <Folder Include="Features\TEDTalks\Commands\" />
+    <Folder Include="Features\TEDTalks\Queries\" />
+    <Folder Include="Features\TEDTalks\Commands\CreateTEDTalkCommand\" />
+    <Folder Include="Features\TEDTalks\Commands\UpdateTEDTalkCommand\" />
+    <Folder Include="Features\TEDTalks\Commands\DeleteTEDTalkCommand\" />
+    <Folder Include="Features\TEDTalks\Queries\GetAllTEDTalks\" />
+    <Folder Include="Features\TEDTalks\Queries\GetTEDTalkById\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CRUD.Challenge.Core.Domain\CRUD.Challenge.Core.Domain.csproj" />
   </ItemGroup>
 </Project>
