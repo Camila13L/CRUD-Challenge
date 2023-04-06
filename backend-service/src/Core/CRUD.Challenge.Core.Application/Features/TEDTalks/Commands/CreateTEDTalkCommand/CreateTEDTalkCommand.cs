@@ -4,6 +4,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
+using CRUD.Challenge.Core.Application.Interfaces;
 using CRUD.Challenge.Core.Application.Wrappers;
 using CRUD.Challenge.Core.Domain.Entities;
 using MediatR;
@@ -31,7 +32,9 @@ public class CreateTEDTalkCommand : IRequest<Response<int>>
 
         public async Task<Response<int>> Handle(CreateTEDTalkCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var newReport = _mapper.Map<TEDTalk>(request);
+            var data = await _respositoryAsync.AddAsync(newReport);
+            return new Response<int>(data.TEDTalkId);
         }
     }
 }

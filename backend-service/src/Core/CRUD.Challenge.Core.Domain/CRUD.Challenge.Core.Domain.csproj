@@ -8,10 +8,8 @@
 
   <ItemGroup>
     <None Remove="Entities\" />
-    <None Remove="Common\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
-    <Folder Include="Common\" />
   </ItemGroup>
 </Project>
