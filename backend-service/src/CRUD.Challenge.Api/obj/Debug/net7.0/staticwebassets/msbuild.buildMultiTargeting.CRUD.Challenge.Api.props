@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/CRUD.Challenge.Api.props" />
+</Project>

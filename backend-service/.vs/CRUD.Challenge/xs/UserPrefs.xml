@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{22A90E77-F1B6-4929-95BA-7EDA40756D35}|https">
+  <MonoDevelop.Ide.ItemProperties.src.CRUD.Challenge.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/CRUD.Challenge.Contracts/Authentication/AuthenticationResponse.cs">
+    <Files>
+      <File FileName="src/CRUD.Challenge.Api/Controllers/WeatherForecastController.cs" Line="30" Column="20" />
+      <File FileName="src/CRUD.Challenge.Api/Program.cs" Line="21" Column="24" />
+      <File FileName="src/CRUD.Challenge.Contracts/Authentication/ResgisterRequest.cs" Line="2" Column="51" />
+      <File FileName="src/CRUD.Challenge.Contracts/Authentication/LoginRequest.cs" Line="2" Column="51" />
+      <File FileName="src/CRUD.Challenge.Contracts/Authentication/AuthenticationResponse.cs" Line="2" Column="51" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CRUD.Challenge" expanded="True">
+            <Node name="src" expanded="True">
+              <Node name="CRUD.Challenge.Api" expanded="True" />
+              <Node name="CRUD.Challenge.Application" expanded="True" />
+              <Node name="CRUD.Challenge.Contracts" expanded="True">
+                <Node name="Authentication" expanded="True">
+                  <Node name="AuthenticationResponse.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="CRUD.Challenge.Domain" expanded="True" />
+              <Node name="CRUD.Challenge.Infrastructure" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

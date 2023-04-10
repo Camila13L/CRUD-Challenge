@@ -1,0 +1,108 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "CRUD.Challenge.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "CRUD.Challenge.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD.Challenge.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD.Challenge.Application.dll": {}
+        }
+      },
+      "CRUD.Challenge.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/CRUD.Challenge.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD.Challenge.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CRUD.Challenge.Application/1.0.0": {
+      "type": "project",
+      "path": "../CRUD.Challenge.Application/CRUD.Challenge.Application.csproj",
+      "msbuildProject": "../CRUD.Challenge.Application/CRUD.Challenge.Application.csproj"
+    },
+    "CRUD.Challenge.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CRUD.Challenge.Domain/CRUD.Challenge.Domain.csproj",
+      "msbuildProject": "../CRUD.Challenge.Domain/CRUD.Challenge.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "CRUD.Challenge.Application >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/saracamilalauramanzaneda/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/CRUD.Challenge.Infrastructure.csproj",
+      "projectName": "CRUD.Challenge.Infrastructure",
+      "projectPath": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/CRUD.Challenge.Infrastructure.csproj",
+      "packagesPath": "/Users/saracamilalauramanzaneda/.nuget/packages/",
+      "outputPath": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/saracamilalauramanzaneda/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/CRUD.Challenge.Application.csproj": {
+              "projectPath": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/CRUD.Challenge.Application.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
