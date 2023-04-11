@@ -1,10 +1,10 @@
 ﻿using System;
 namespace CRUD.Challenge.Contracts.Authentication;
 
-public class ResgisterRequest
-{
-	public ResgisterRequest()
-	{
-	}
-}
-
+public record ResgisterRequest
+(
+    string FirstName,
+    string LastName,
+    string Emal,
+    string Password
+);

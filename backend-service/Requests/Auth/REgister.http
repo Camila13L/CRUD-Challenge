@@ -1,0 +1,11 @@
+@host=https://localhost:7127
+
+POST {{host}}/auth/loregistergin
+Content-Type: application/json
+
+{
+    "FirstName": "Camila",
+    "LastName": "Laura",
+    "email": "camila@mantinband.com",
+    "password": "Amiko1232!"
+}

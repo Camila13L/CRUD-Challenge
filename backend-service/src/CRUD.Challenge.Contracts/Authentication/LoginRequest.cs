@@ -1,10 +1,9 @@
 ﻿using System;
 namespace CRUD.Challenge.Contracts.Authentication;
 
-public class LoginRequest
-{
-	public LoginRequest()
-	{
-	}
-}
+public record LoginRequest
+(
+    string Emal,
+    string Password
+);
 
