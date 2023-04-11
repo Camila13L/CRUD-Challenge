@@ -104,6 +104,9 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Contracts/CRUD.Challenge.Contracts.csproj": {
+                "projectPath": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Contracts/CRUD.Challenge.Contracts.csproj"
+              },
               "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Domain/CRUD.Challenge.Domain.csproj": {
                 "projectPath": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Domain/CRUD.Challenge.Domain.csproj"
               }

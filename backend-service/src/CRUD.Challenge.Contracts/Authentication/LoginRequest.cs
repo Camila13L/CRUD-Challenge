@@ -3,7 +3,7 @@ namespace CRUD.Challenge.Contracts.Authentication;
 
 public record LoginRequest
 (
-    string Emal,
+    string Email,
     string Password
 );
 

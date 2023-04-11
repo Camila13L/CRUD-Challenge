@@ -2,6 +2,16 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "CRUD.Challenge.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/CRUD.Challenge.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD.Challenge.Contracts.dll": {}
+        }
+      },
       "CRUD.Challenge.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -15,6 +25,11 @@
     }
   },
   "libraries": {
+    "CRUD.Challenge.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../CRUD.Challenge.Contracts/CRUD.Challenge.Contracts.csproj",
+      "msbuildProject": "../CRUD.Challenge.Contracts/CRUD.Challenge.Contracts.csproj"
+    },
     "CRUD.Challenge.Domain/1.0.0": {
       "type": "project",
       "path": "../CRUD.Challenge.Domain/CRUD.Challenge.Domain.csproj",
@@ -23,6 +38,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "CRUD.Challenge.Contracts >= 1.0.0",
       "CRUD.Challenge.Domain >= 1.0.0"
     ]
   },
@@ -52,6 +68,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Contracts/CRUD.Challenge.Contracts.csproj": {
+              "projectPath": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Contracts/CRUD.Challenge.Contracts.csproj"
+            },
             "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Domain/CRUD.Challenge.Domain.csproj": {
               "projectPath": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Domain/CRUD.Challenge.Domain.csproj"
             }

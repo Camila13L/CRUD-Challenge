@@ -1,7 +1,7 @@
 ﻿using System;
-namespace CRUD.Challenge.Contracts.Authentication;
+namespace CRUD.Challenge.Application.Services.Authentication;
 
-public record AuthenticationResponse
+public record AuthenticationResult
 (
     Guid Id,
     string FirstName,

@@ -6,6 +6,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "CRUD.Challenge.Contracts": "1.0.0",
           "CRUD.Challenge.Domain": "1.0.0"
         },
         "compile": {
@@ -13,6 +14,16 @@
         },
         "runtime": {
           "bin/placeholder/CRUD.Challenge.Application.dll": {}
+        }
+      },
+      "CRUD.Challenge.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/CRUD.Challenge.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD.Challenge.Contracts.dll": {}
         }
       },
       "CRUD.Challenge.Domain/1.0.0": {
@@ -32,6 +43,11 @@
       "type": "project",
       "path": "../CRUD.Challenge.Application/CRUD.Challenge.Application.csproj",
       "msbuildProject": "../CRUD.Challenge.Application/CRUD.Challenge.Application.csproj"
+    },
+    "CRUD.Challenge.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../CRUD.Challenge.Contracts/CRUD.Challenge.Contracts.csproj",
+      "msbuildProject": "../CRUD.Challenge.Contracts/CRUD.Challenge.Contracts.csproj"
     },
     "CRUD.Challenge.Domain/1.0.0": {
       "type": "project",

@@ -5,6 +5,6 @@ public record ResgisterRequest
 (
     string FirstName,
     string LastName,
-    string Emal,
+    string Email,
     string Password
 );

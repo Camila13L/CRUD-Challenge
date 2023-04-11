@@ -8,5 +8,16 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CRUD.Challenge.Domain\CRUD.Challenge.Domain.csproj" />
+    <ProjectReference Include="..\CRUD.Challenge.Contracts\CRUD.Challenge.Contracts.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="Services\Authentication\" />
+    <None Remove="Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Services\Authentication\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 </Project>

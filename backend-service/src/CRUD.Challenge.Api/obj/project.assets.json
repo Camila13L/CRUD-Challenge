@@ -112,6 +112,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "CRUD.Challenge.Contracts": "1.0.0",
           "CRUD.Challenge.Domain": "1.0.0"
         },
         "compile": {
