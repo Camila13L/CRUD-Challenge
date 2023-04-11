@@ -32,3 +32,5 @@
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/obj/Debug/net7.0/refint/CRUD.Challenge.Infrastructure.dll
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/obj/Debug/net7.0/CRUD.Challenge.Infrastructure.pdb
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/obj/Debug/net7.0/ref/CRUD.Challenge.Infrastructure.dll
+/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/bin/Debug/net7.0/CRUD.Challenge.Contracts.dll
+/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/bin/Debug/net7.0/CRUD.Challenge.Contracts.pdb

@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CRUD.Challenge.Application.Interfaces;
+using CRUD.Challenge.Application.Services.Authentication;
 using CRUD.Challenge.Contracts.Authentication;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace CRUD.Challenge.Api.Controllers;
@@ -10,18 +13,29 @@ namespace CRUD.Challenge.Api.Controllers;
 [Route("auth")]
 public class AuthenticationController : ControllerBase
 {
-    
-    [HttpPost("register")]
-    public IActionResult Post(ResgisterRequest request)
+    private readonly IAuthenticationService _authenticationService;
+
+    public AuthenticationController(IAuthenticationService authenticationService)
     {
-        return Ok(request);
+        _authenticationService = authenticationService;
+    }
+
+    [HttpPost("register")]
+    public async Task<IActionResult> Register(ResgisterRequest request)
+    {
+        AuthenticationResult registerResult = await _authenticationService.Register(request.FirstName, request.LastName, request.Email, request.Password);
+        var registerResponse = new AuthenticationResponse(registerResult.Id, registerResult.FirstName, registerResult.LastName, registerResult.Email, registerResult.token);
+        return  Ok(registerResponse);
     }
 
 
     [HttpPost("login")]
-    public IActionResult Login(LoginRequest request)
+    public async Task<IActionResult> Login(LoginRequest request)
     {
-        return Ok(request);
+
+        AuthenticationResult loginResult = await _authenticationService.Login(request.Email, request.Password);
+        AuthenticationResponse loginResponse = new AuthenticationResponse(loginResult.Id, loginResult.FirstName, loginResult.LastName, loginResult.Email, loginResult.token);
+        return Ok(loginResponse);
     }
 }
 

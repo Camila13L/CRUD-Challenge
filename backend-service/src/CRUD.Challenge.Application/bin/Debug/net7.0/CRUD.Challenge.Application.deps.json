@@ -8,10 +8,16 @@
     ".NETCoreApp,Version=v7.0": {
       "CRUD.Challenge.Application/1.0.0": {
         "dependencies": {
+          "CRUD.Challenge.Contracts": "1.0.0",
           "CRUD.Challenge.Domain": "1.0.0"
         },
         "runtime": {
           "CRUD.Challenge.Application.dll": {}
+        }
+      },
+      "CRUD.Challenge.Contracts/1.0.0": {
+        "runtime": {
+          "CRUD.Challenge.Contracts.dll": {}
         }
       },
       "CRUD.Challenge.Domain/1.0.0": {
@@ -23,6 +29,11 @@
   },
   "libraries": {
     "CRUD.Challenge.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CRUD.Challenge.Contracts/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
