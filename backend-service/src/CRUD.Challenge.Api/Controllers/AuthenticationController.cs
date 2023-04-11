@@ -8,15 +8,14 @@ using CRUD.Challenge.Application.Common.Interfaces.Errors;
 using CRUD.Challenge.Application.Interfaces;
 using CRUD.Challenge.Application.Services.Authentication;
 using CRUD.Challenge.Contracts.Authentication;
+using CRUD.Challenge.Domain.Common.Errors;
 using ErrorOr;
 using FluentResults;
 using Microsoft.AspNetCore.Mvc;
-
-
 namespace CRUD.Challenge.Api.Controllers;
-[ApiController]
+
 [Route("auth")]
-public class AuthenticationController : ControllerBase
+public class AuthenticationController : ApiController
 {
     private readonly IAuthenticationService _authenticationService;
 
@@ -38,9 +37,9 @@ public class AuthenticationController : ControllerBase
             );
 
 
-        return registerResult.MatchFirst(
+        return registerResult.Match(
             autResult => Ok(MapAuthResult(autResult)),
-            firstError=> Problem(statusCode: StatusCodes.Status409Conflict, detail: firstError.Description)
+            errors => Problem(errors)
             );
       
     }
@@ -49,14 +48,23 @@ public class AuthenticationController : ControllerBase
     public async Task<IActionResult> Login(LoginRequest request)
     {
 
-        AuthenticationResult loginResult = await _authenticationService.Login(request.Email, request.Password);
-        AuthenticationResponse loginResponse = new AuthenticationResponse(loginResult.user.Id, loginResult.user.FirstName, loginResult.user.LastName, loginResult.user.Email, loginResult.token);
-        return Ok(loginResponse);
+        ErrorOr<AuthenticationResult> loginResult = await _authenticationService.Login(request.Email, request.Password);
+
+        if (loginResult.IsError && loginResult.FirstError == HttpErrors.Authentication.InvalidCredentials)
+        {
+            return Problem(statusCode: StatusCodes.Status401Unauthorized, title: loginResult.FirstError.Description);
+        }
+
+        return loginResult.Match(
+              autResult => Ok(MapAuthResult(autResult)),
+              errors => Problem(errors.ToList())
+             );
     }
 
     private static AuthenticationResponse MapAuthResult(AuthenticationResult authresult)
     {
-        return new AuthenticationResponse
+         AuthenticationResponse authenticationResponse = 
+         new AuthenticationResponse
                         (
                         authresult.user.Id,
                         authresult.user.FirstName,
@@ -64,6 +72,8 @@ public class AuthenticationController : ControllerBase
                         authresult.user.Email,
                         authresult.token
                         );
+
+        return authenticationResponse;
     }
 }
 

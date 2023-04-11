@@ -27,7 +27,7 @@ public class AuthenticationService : IAuthenticationService
         User userEmail = await _userRepository.GetUserByEmail(email);
         if (userEmail is not null)
         {
-            return Errors.User.DuplicatedEmail;
+            return new[] { HttpErrors.User.DuplicatedEmail };
         }
 
         User user = new User
@@ -47,12 +47,12 @@ public class AuthenticationService : IAuthenticationService
     {
         if (await _userRepository.GetUserByEmail(email) is not User user)
         {
-            throw new Exception("user not found");
+            return HttpErrors.Authentication.InvalidCredentials;
         }
 
         if (user.Password != password)
         {
-            throw new Exception("Incorrect password");
+            return new[] { HttpErrors.Authentication.InvalidPassword };
         }
 
         var token = await _jwtTokenGenerator.GenerateToken(user);

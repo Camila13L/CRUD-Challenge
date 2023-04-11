@@ -24,17 +24,22 @@
     <ProjectReference Include="..\CRUD.Challenge.Infrastructure\CRUD.Challenge.Infrastructure.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\CRUD.Challenge.Domain\CRUD.Challenge.Domain.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Remove="Middleware\" />
     <None Remove="Filters\" />
     <None Remove="Common\" />
     <None Remove="Common\Errors\" />
+    <None Remove="Common\Http\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Middleware\" />
     <Folder Include="Filters\" />
     <Folder Include="Common\" />
     <Folder Include="Common\Errors\" />
+    <Folder Include="Common\Http\" />
   </ItemGroup>
 </Project>

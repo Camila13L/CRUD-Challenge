@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using CRUD.Challenge.Api.Common.Http;
+using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -60,8 +62,12 @@ public class CRUDChallengeProblemDetailsFactory : ProblemDetailsFactory
             problemDetails.Extensions["traceId"] = traceId;
         }
 
-        problemDetails.Extensions.Add("customProperty","customValue");
-    }
+        List<Error>? errors = httpContext?.Items[HttpContextItemKeys.Errors] as List<Error>;
 
+        if (errors != null)
+        {
+            problemDetails.Extensions.Add("errorCodes", errors.Select(x => x.Code));
+        }
+    }
 }
 
