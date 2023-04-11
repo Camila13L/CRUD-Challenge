@@ -4,6 +4,7 @@ using System.Security.Claims;
 using System.Text;
 using CRUD.Challenge.Application.Common.Interfaces.Authentication;
 using CRUD.Challenge.Application.Common.Interfaces.Services;
+using CRUD.Challenge.Domain.Entites;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
@@ -20,7 +21,7 @@ public class JwtTokenGenerator : IJwtTokenGenerator
         _dateTimeProvider = dateTimeProvider;
     }
 
-    public async Task<string> GenerateToken(Guid userId, string firstName, string lastName)
+    public async Task<string> GenerateToken(User user)
     {
         SigningCredentials singingCredentials = new SigningCredentials
             (
@@ -31,9 +32,9 @@ public class JwtTokenGenerator : IJwtTokenGenerator
 
         Claim[] claims = new[]
         {
-            new Claim(JwtRegisteredClaimNames.Sub, Guid.NewGuid().ToString()),
-            new Claim(JwtRegisteredClaimNames.GivenName, firstName.ToString()),
-            new Claim(JwtRegisteredClaimNames.FamilyName, lastName.ToString()),
+            new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+            new Claim(JwtRegisteredClaimNames.GivenName, user.FirstName),
+            new Claim(JwtRegisteredClaimNames.FamilyName, user.LastName),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
         };
 

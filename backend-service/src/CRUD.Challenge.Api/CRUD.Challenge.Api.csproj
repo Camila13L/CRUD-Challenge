@@ -25,4 +25,14 @@
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Middleware\" />
+    <None Remove="Filters\" />
+    <None Remove="Errors\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Middleware\" />
+    <Folder Include="Filters\" />
+    <Folder Include="Errors\" />
+  </ItemGroup>
 </Project>

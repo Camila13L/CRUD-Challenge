@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CRUD.Challenge.Api.Filters;
 using CRUD.Challenge.Application.Interfaces;
 using CRUD.Challenge.Application.Services.Authentication;
 using CRUD.Challenge.Contracts.Authentication;
@@ -24,7 +25,7 @@ public class AuthenticationController : ControllerBase
     public async Task<IActionResult> Register(ResgisterRequest request)
     {
         AuthenticationResult registerResult = await _authenticationService.Register(request.FirstName, request.LastName, request.Email, request.Password);
-        var registerResponse = new AuthenticationResponse(registerResult.Id, registerResult.FirstName, registerResult.LastName, registerResult.Email, registerResult.token);
+        var registerResponse = new AuthenticationResponse(registerResult.user.Id, registerResult.user.FirstName, registerResult.user.LastName, registerResult.user.Email, registerResult.token);
         return  Ok(registerResponse);
     }
 
@@ -34,7 +35,7 @@ public class AuthenticationController : ControllerBase
     {
 
         AuthenticationResult loginResult = await _authenticationService.Login(request.Email, request.Password);
-        AuthenticationResponse loginResponse = new AuthenticationResponse(loginResult.Id, loginResult.FirstName, loginResult.LastName, loginResult.Email, loginResult.token);
+        AuthenticationResponse loginResponse = new AuthenticationResponse(loginResult.user.Id, loginResult.user.FirstName, loginResult.user.LastName, loginResult.user.Email, loginResult.token);
         return Ok(loginResponse);
     }
 }

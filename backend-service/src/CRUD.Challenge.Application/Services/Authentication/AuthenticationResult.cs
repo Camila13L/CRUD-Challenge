@@ -1,12 +1,11 @@
 ﻿using System;
+using CRUD.Challenge.Domain.Entites;
+
 namespace CRUD.Challenge.Application.Services.Authentication;
 
 public record AuthenticationResult
 (
-    Guid Id,
-    string FirstName,
-    string LastName,
-    string Email,
+    User user,
     string token
 );
 
