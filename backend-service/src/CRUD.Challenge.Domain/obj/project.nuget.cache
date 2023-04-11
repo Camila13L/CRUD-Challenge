@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mzw/Xxx5q+1g6TuD58hG9zHlFjT3FXzA2i/ibtPEWzn0qyqRci3bXpfYMBj9ES2oqev/G+ilvKhzGaGfXUqFxQ==",
+  "dgSpecHash": "kdS8FCXxVlQIV69wVSIEiM7sW3j/uII3ZpNN70wAvvfecAgjuBmu53206XpZBxwF+/Yfz/p0iEaBx79iUjhvnA==",
   "success": true,
   "projectFilePath": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Domain/CRUD.Challenge.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/saracamilalauramanzaneda/.nuget/packages/erroror/1.2.1/erroror.1.2.1.nupkg.sha512"
+  ],
   "logs": []
 }

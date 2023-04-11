@@ -9,13 +9,17 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllers();
-//options => options.Filters.Add<ErrorHandlingfilterAttribute>()
+
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen();
 builder.Services
     .AddApplication()
     .AddInfrastructure(builder.Configuration);
+
 builder.Services.AddSingleton<ProblemDetailsFactory,CRUDChallengeProblemDetailsFactory>();
+
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -24,7 +28,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseExceptionHandler("/error");
 app.UseHttpsRedirection();
 

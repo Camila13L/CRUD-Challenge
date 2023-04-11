@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CRUD.Challenge.Api.Filters;
+using CRUD.Challenge.Application.Common.Errors;
+using CRUD.Challenge.Application.Common.Interfaces.Errors;
 using CRUD.Challenge.Application.Interfaces;
 using CRUD.Challenge.Application.Services.Authentication;
 using CRUD.Challenge.Contracts.Authentication;
-
+using ErrorOr;
+using FluentResults;
 using Microsoft.AspNetCore.Mvc;
+
 
 namespace CRUD.Challenge.Api.Controllers;
 [ApiController]
@@ -24,11 +28,22 @@ public class AuthenticationController : ControllerBase
     [HttpPost("register")]
     public async Task<IActionResult> Register(ResgisterRequest request)
     {
-        AuthenticationResult registerResult = await _authenticationService.Register(request.FirstName, request.LastName, request.Email, request.Password);
-        var registerResponse = new AuthenticationResponse(registerResult.user.Id, registerResult.user.FirstName, registerResult.user.LastName, registerResult.user.Email, registerResult.token);
-        return  Ok(registerResponse);
-    }
+        // , List<IError>>
+            ErrorOr<AuthenticationResult> registerResult = await _authenticationService.Register
+            (
+            request.FirstName,
+            request.LastName,
+            request.Email,
+            request.Password
+            );
 
+
+        return registerResult.MatchFirst(
+            autResult => Ok(MapAuthResult(autResult)),
+            firstError=> Problem(statusCode: StatusCodes.Status409Conflict, detail: firstError.Description)
+            );
+      
+    }
 
     [HttpPost("login")]
     public async Task<IActionResult> Login(LoginRequest request)
@@ -37,6 +52,18 @@ public class AuthenticationController : ControllerBase
         AuthenticationResult loginResult = await _authenticationService.Login(request.Email, request.Password);
         AuthenticationResponse loginResponse = new AuthenticationResponse(loginResult.user.Id, loginResult.user.FirstName, loginResult.user.LastName, loginResult.user.Email, loginResult.token);
         return Ok(loginResponse);
+    }
+
+    private static AuthenticationResponse MapAuthResult(AuthenticationResult authresult)
+    {
+        return new AuthenticationResponse
+                        (
+                        authresult.user.Id,
+                        authresult.user.FirstName,
+                        authresult.user.LastName,
+                        authresult.user.Email,
+                        authresult.token
+                        );
     }
 }
 

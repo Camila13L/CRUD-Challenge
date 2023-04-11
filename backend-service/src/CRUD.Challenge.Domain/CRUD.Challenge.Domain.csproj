@@ -8,8 +8,16 @@
 
   <ItemGroup>
     <None Remove="Entites\" />
+    <None Remove="Common\" />
+    <None Remove="Common\Errors\" />
+    <None Remove="Common\Errors\Erros.User" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entites\" />
+    <Folder Include="Common\" />
+    <Folder Include="Common\Errors\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ErrorOr" Version="1.2.1" />
   </ItemGroup>
 </Project>

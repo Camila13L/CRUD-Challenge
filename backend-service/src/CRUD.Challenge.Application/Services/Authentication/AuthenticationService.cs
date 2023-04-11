@@ -1,8 +1,13 @@
 ﻿using System;
+using CRUD.Challenge.Application.Common.Errors;
 using CRUD.Challenge.Application.Common.Interfaces.Authentication;
+using CRUD.Challenge.Application.Common.Interfaces.Errors;
 using CRUD.Challenge.Application.Common.Interfaces.Persistence;
 using CRUD.Challenge.Application.Interfaces;
+using CRUD.Challenge.Domain.Common.Errors;
 using CRUD.Challenge.Domain.Entites;
+using ErrorOr;
+using FluentResults;
 
 namespace CRUD.Challenge.Application.Services.Authentication;
 
@@ -17,13 +22,12 @@ public class AuthenticationService : IAuthenticationService
         _userRepository = userRepository;
     }
 
-    public async Task<AuthenticationResult> Register(string firstName, string lastName, string email, string password)
+    public async Task<ErrorOr<AuthenticationResult>> Register(string firstName, string lastName, string email, string password)
     {
         User userEmail = await _userRepository.GetUserByEmail(email);
         if (userEmail is not null)
         {
-            throw new Exception("User already exists");
-
+            return Errors.User.DuplicatedEmail;
         }
 
         User user = new User
@@ -39,7 +43,7 @@ public class AuthenticationService : IAuthenticationService
         return await Task.Run(() => new AuthenticationResult(user, token));
     }
 
-    public async Task<AuthenticationResult> Login(string email, string password)
+    public async Task<ErrorOr<AuthenticationResult>> Login(string email, string password)
     {
         if (await _userRepository.GetUserByEmail(email) is not User user)
         {
