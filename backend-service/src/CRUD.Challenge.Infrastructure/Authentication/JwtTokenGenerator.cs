@@ -3,18 +3,29 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using CRUD.Challenge.Application.Common.Interfaces.Authentication;
+using CRUD.Challenge.Application.Common.Interfaces.Services;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 namespace CRUD.Challenge.Infrastructure.Authentication;
 
 public class JwtTokenGenerator : IJwtTokenGenerator
 {
+    private readonly JwtSettings _jwtSettings;
+    private readonly IDateTimeProvider _dateTimeProvider;
+
+    public JwtTokenGenerator(IOptions<JwtSettings> jwtOptions, IDateTimeProvider dateTimeProvider)
+    {
+        _jwtSettings = jwtOptions.Value;
+        _dateTimeProvider = dateTimeProvider;
+    }
+
     public async Task<string> GenerateToken(Guid userId, string firstName, string lastName)
     {
         SigningCredentials singingCredentials = new SigningCredentials
             (
             new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes("super-secret-key")),
+                Encoding.UTF8.GetBytes(_jwtSettings.Secret)),
                 SecurityAlgorithms.HmacSha256
             );
 
@@ -28,8 +39,9 @@ public class JwtTokenGenerator : IJwtTokenGenerator
 
         JwtSecurityToken secutyToken = new JwtSecurityToken
             (
-            issuer: "CRUDChallenge",
-            expires:DateTime.Now.AddDays(1),
+            issuer: _jwtSettings.Issuer,
+            audience: _jwtSettings.Audience,
+            expires: _dateTimeProvider.UtcNow.AddHours(_jwtSettings.ExpiryMinutes),
             claims: claims,
             signingCredentials: singingCredentials
             );

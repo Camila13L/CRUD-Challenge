@@ -1,15 +1,15 @@
 using CRUD.Challenge.Application;
 using CRUD.Challenge.Infrastructure;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();//
-builder.Services.AddSwaggerGen();//
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 builder.Services
     .AddApplication()
-    .AddInfrastructure();
+    .AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
