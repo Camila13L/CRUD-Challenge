@@ -16,8 +16,10 @@
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/bin/Debug/net7.0/CRUD.Challenge.Application.deps.json
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/bin/Debug/net7.0/CRUD.Challenge.Application.dll
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/bin/Debug/net7.0/CRUD.Challenge.Application.pdb
+/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/bin/Debug/net7.0/CRUD.Challenge.Contracts.dll
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/bin/Debug/net7.0/CRUD.Challenge.Domain.dll
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/bin/Debug/net7.0/CRUD.Challenge.Domain.pdb
+/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/bin/Debug/net7.0/CRUD.Challenge.Contracts.pdb
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/obj/Debug/net7.0/CRUD.Challenge.Application.csproj.AssemblyReference.cache
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/obj/Debug/net7.0/CRUD.Challenge.Application.GeneratedMSBuildEditorConfig.editorconfig
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/obj/Debug/net7.0/CRUD.Challenge.Application.AssemblyInfoInputs.cache
@@ -28,5 +30,3 @@
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/obj/Debug/net7.0/refint/CRUD.Challenge.Application.dll
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/obj/Debug/net7.0/CRUD.Challenge.Application.pdb
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/obj/Debug/net7.0/ref/CRUD.Challenge.Application.dll
-/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/bin/Debug/net7.0/CRUD.Challenge.Contracts.dll
-/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/bin/Debug/net7.0/CRUD.Challenge.Contracts.pdb

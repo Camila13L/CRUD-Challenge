@@ -19,8 +19,10 @@
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/bin/Debug/net7.0/CRUD.Challenge.Infrastructure.dll
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/bin/Debug/net7.0/CRUD.Challenge.Infrastructure.pdb
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/bin/Debug/net7.0/CRUD.Challenge.Application.dll
+/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/bin/Debug/net7.0/CRUD.Challenge.Contracts.dll
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/bin/Debug/net7.0/CRUD.Challenge.Domain.dll
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/bin/Debug/net7.0/CRUD.Challenge.Application.pdb
+/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/bin/Debug/net7.0/CRUD.Challenge.Contracts.pdb
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/bin/Debug/net7.0/CRUD.Challenge.Domain.pdb
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/obj/Debug/net7.0/CRUD.Challenge.Infrastructure.csproj.AssemblyReference.cache
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/obj/Debug/net7.0/CRUD.Challenge.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
@@ -32,5 +34,3 @@
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/obj/Debug/net7.0/refint/CRUD.Challenge.Infrastructure.dll
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/obj/Debug/net7.0/CRUD.Challenge.Infrastructure.pdb
 /Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/obj/Debug/net7.0/ref/CRUD.Challenge.Infrastructure.dll
-/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/bin/Debug/net7.0/CRUD.Challenge.Contracts.dll
-/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/bin/Debug/net7.0/CRUD.Challenge.Contracts.pdb

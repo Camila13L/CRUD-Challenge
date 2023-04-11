@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lmOJLGHvtdSLzbCTetqYrY+7BJeAKyAshUasq0a4Rsg8DUqNZiXYq3st0owLjohOgvjYySNHiqiUwLFk1ugGgw==",
+  "dgSpecHash": "9r95g8tl4zFW4T6O7tBEVkg3w04ckyYm9gP3I7qGdGULNzVDZ0czPPtomNDuYJvpUKMDmPfW+/bOXlec4X8gQQ==",
   "success": true,
   "projectFilePath": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Application/CRUD.Challenge.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/saracamilalauramanzaneda/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
