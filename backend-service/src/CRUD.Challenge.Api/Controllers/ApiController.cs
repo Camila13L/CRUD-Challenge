@@ -4,8 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace CRUD.Challenge.Api.Controllers;
 
@@ -14,6 +13,20 @@ public class ApiController : ControllerBase
 {
     protected IActionResult Problem(List<Error> errors)
     {
+        if (errors.All(error => error.Type == ErrorType.Validation))
+        {
+            var modelStateDictionary = new ModelStateDictionary();
+
+            foreach (var error in errors)
+            {
+                modelStateDictionary.AddModelError(error.Code, error.Description);
+            }
+
+            return ValidationProblem(modelStateDictionary);
+        }
+
+
+
         HttpContext.Items["errors"] = errors;
         Error firstError = errors[0];
         int statusCode = firstError.Type switch
@@ -23,7 +36,7 @@ public class ApiController : ControllerBase
             ErrorType.NotFound => StatusCodes.Status404NotFound,
             _ => StatusCodes.Status500InternalServerError
         };
-        return Problem(statusCode: statusCode, title: firstError.Description); 
+        return Problem(); 
     }
 }
 
