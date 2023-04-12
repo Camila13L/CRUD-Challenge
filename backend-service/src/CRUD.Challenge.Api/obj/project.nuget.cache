@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "CVRFERUXpiIQ9zGrOkBEvKeDGvzxu4ZpHm6PrmvZgQur1TogPs1YBJR07xu1WLD+UlKM0Hn/yzj3cTtjHIlX8Q==",
+  "dgSpecHash": "matqf705nvUNvlllu4ZGhXaYWI/TfOZTf/BPWBRv9GFEv2d0B43hHmjQYTxgiaox2c0bZk0pIEHNQJ6oBarh7g==",
   "success": true,
   "projectFilePath": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Api/CRUD.Challenge.Api.csproj",
   "expectedPackageFiles": [
     "/Users/saracamilalauramanzaneda/.nuget/packages/erroror/1.2.1/erroror.1.2.1.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/fluentresults/3.15.2/fluentresults.3.15.2.nupkg.sha512",
+    "/Users/saracamilalauramanzaneda/.nuget/packages/fluentvalidation/11.5.2/fluentvalidation.11.5.2.nupkg.sha512",
+    "/Users/saracamilalauramanzaneda/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "/Users/saracamilalauramanzaneda/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/mapster/7.3.0/mapster.7.3.0.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/mapster.core/1.2.0/mapster.core.1.2.0.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/mapster.dependencyinjection/1.0.0/mapster.dependencyinjection.1.0.0.nupkg.sha512",

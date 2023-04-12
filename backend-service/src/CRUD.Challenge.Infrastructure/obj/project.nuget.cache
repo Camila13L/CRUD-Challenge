@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "0H+j52qfpb3EyGltYXhJewzqX88GRzvfxVrGFReFEyRX/K+19c6T/1YSqbwVy7NBuMjtNWCfVdfHVL5iNJN9uA==",
+  "dgSpecHash": "CYNU/lhtoxUGuzIyjHSOdlQVhIrE/tEgxNQxL2UAUWajh+tOVT3vupQKbxST3oo90+bhLs/2fjRdnshA4SamOQ==",
   "success": true,
   "projectFilePath": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/CRUD.Challenge.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/saracamilalauramanzaneda/.nuget/packages/erroror/1.2.1/erroror.1.2.1.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/fluentresults/3.15.2/fluentresults.3.15.2.nupkg.sha512",
+    "/Users/saracamilalauramanzaneda/.nuget/packages/fluentvalidation/11.5.2/fluentvalidation.11.5.2.nupkg.sha512",
+    "/Users/saracamilalauramanzaneda/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "/Users/saracamilalauramanzaneda/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/mediatr/11.1.0/mediatr.11.1.0.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
