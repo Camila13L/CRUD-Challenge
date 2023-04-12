@@ -34,7 +34,7 @@ public class AuthenticationController : ApiController
     }
 
     [HttpPost("register")]
-    public async Task<IActionResult> Register(ResgisterRequest request)
+    public async Task<IActionResult> Register(RegisterRequest request)
     {
         RegisterCommand command = _mapper.Map<RegisterCommand>(request);
 

@@ -1,7 +1,7 @@
 ﻿using System;
 namespace CRUD.Challenge.Contracts.Authentication;
 
-public record ResgisterRequest
+public record RegisterRequest
 (
     string FirstName,
     string LastName,
