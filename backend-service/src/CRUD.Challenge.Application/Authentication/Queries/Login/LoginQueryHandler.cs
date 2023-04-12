@@ -1,10 +1,9 @@
-﻿using System;
-using CRUD.Challenge.Application.Common.Interfaces.Authentication;
+﻿using CRUD.Challenge.Application.Common.Interfaces.Authentication;
 using CRUD.Challenge.Application.Common.Interfaces.Persistence;
 using ErrorOr;
 using MediatR;
 using CRUD.Challenge.Domain.Entites;
-using CRUD.Challenge.Domain.Common.Errors;
+using CRUD.Challenge.Domain.Common.HttpErrors;
 using CRUD.Challenge.Application.Authentication.Common;
 
 namespace CRUD.Challenge.Application.Authentication.Queries.Login;

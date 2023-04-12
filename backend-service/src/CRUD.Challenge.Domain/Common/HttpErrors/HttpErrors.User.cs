@@ -1,7 +1,7 @@
 ﻿using System;
 using ErrorOr;
 
-namespace CRUD.Challenge.Domain.Common.Errors;
+namespace CRUD.Challenge.Domain.Common.HttpErrors;
 
 public static partial class HttpErrors
 {

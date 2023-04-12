@@ -1,12 +1,11 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 using System.Text.Json;
 
 namespace CRUD.Challenge.Api.Middleware;
 
 public class ErrorHandlingMiddleware
 {
-	private readonly RequestDelegate _next;
+    private readonly RequestDelegate _next;
 
     public ErrorHandlingMiddleware(RequestDelegate next)
     {

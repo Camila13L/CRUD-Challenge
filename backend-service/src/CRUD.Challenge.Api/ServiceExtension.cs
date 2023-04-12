@@ -1,5 +1,4 @@
-﻿using System;
-using CRUD.Challenge.Api.Errors;
+﻿using CRUD.Challenge.Api.Common.Errors;
 using CRUD.Challenge.Api.Mapping;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 
@@ -10,7 +9,6 @@ public static class ServiceExtension
 	public static IServiceCollection AddPresentation(this IServiceCollection services)
 	{
 		services.AddControllers();
-		services.AddSingleton<ProblemDetailsFactory, CRUDChallengeProblemDetailsFactory>();
 		services.AddMappings();
 		return services;
 	}

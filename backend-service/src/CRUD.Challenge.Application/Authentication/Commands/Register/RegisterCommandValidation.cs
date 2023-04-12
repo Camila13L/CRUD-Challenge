@@ -1,9 +1,6 @@
-﻿using System;
-using CRUD.Challenge.Application.Authentication.Commands.Register;
-using FluentValidation;
+﻿using FluentValidation;
 
-namespace CRUD.Challenge.Application.Authentication.Commands;
-
+namespace CRUD.Challenge.Application.Authentication.Commands.Register;
 public class RegisterCommandValidation : AbstractValidator<RegisterCommand> 
 {
 	public RegisterCommandValidation()

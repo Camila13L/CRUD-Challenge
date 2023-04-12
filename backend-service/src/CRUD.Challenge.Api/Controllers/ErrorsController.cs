@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CRUD.Challenge.Application.Common.Errors;
-using CRUD.Challenge.Application.Common.Interfaces.Errors;
+﻿using CRUD.Challenge.Application.Common.Interfaces.Errors;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 

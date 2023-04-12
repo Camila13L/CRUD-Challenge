@@ -2,16 +2,13 @@
 using CRUD.Challenge.Application.Common.Interfaces.Authentication;
 using CRUD.Challenge.Application.Common.Interfaces.Persistence;
 using CRUD.Challenge.Domain.Entites;
-using CRUD.Challenge.Domain.Common.Errors;
+using CRUD.Challenge.Domain.Common.HttpErrors;
 using ErrorOr;
 using MediatR;
 
-using static CRUD.Challenge.Domain.Common.Errors.HttpErrors;
-using User = CRUD.Challenge.Domain.Entites.User;
 using CRUD.Challenge.Application.Authentication.Common;
 
 namespace CRUD.Challenge.Application.Authentication.Commands.Register;
-
 public class RegistercommandHandler : IRequestHandler<RegisterCommand, ErrorOr<AuthenticationResult>>
 {
     private readonly IJwtTokenGenerator _jwtTokenGenerator;

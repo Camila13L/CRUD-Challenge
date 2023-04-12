@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using CRUD.Challenge.Api.Common.Http;
 using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
@@ -7,7 +6,7 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Options;
 
-namespace CRUD.Challenge.Api.Errors;
+namespace CRUD.Challenge.Api.Common.Errors;
 
 public class CRUDChallengeProblemDetailsFactory : ProblemDetailsFactory
 {

@@ -1,5 +1,4 @@
-﻿using System;
-using CRUD.Challenge.Application.Authentication.Common;
+﻿using CRUD.Challenge.Application.Authentication.Common;
 using ErrorOr;
 using MediatR;
 

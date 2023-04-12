@@ -1,5 +1,4 @@
-﻿using System;
-namespace CRUD.Challenge.Api.Common.Http;
+﻿namespace CRUD.Challenge.Api.Common.Http;
 
 public class HttpContextItemKeys
 {

@@ -12,7 +12,7 @@ using CRUD.Challenge.Application.Common.Interfaces.Errors;
 using CRUD.Challenge.Application.Interfaces;
 using CRUD.Challenge.Application.Interfaces.Authentication;
 using CRUD.Challenge.Contracts.Authentication;
-using CRUD.Challenge.Domain.Common.Errors;
+using CRUD.Challenge.Domain.Common.HttpErrors;
 using ErrorOr;
 using FluentResults;
 using MapsterMapper;
@@ -43,7 +43,7 @@ public class AuthenticationController : ApiController
 
         return registerResult.Match(
             autResult => Ok(_mapper.Map<AuthenticationResponse>(autResult)),
-            errors => ProblemX(errors)
+            errors => Problem(errors)
             );
       
     }
@@ -62,7 +62,7 @@ public class AuthenticationController : ApiController
 
         return loginResult.Match(
               autResult => Ok(_mapper.Map<AuthenticationResponse>(autResult)),
-              errors => ProblemX(errors.ToList())
+              errors => Problem(errors.ToList())
              );
     }
 }

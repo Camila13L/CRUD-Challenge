@@ -1,5 +1,4 @@
-﻿using System;
-using CRUD.Challenge.Domain.Entites;
+﻿using CRUD.Challenge.Domain.Entites;
 
 namespace CRUD.Challenge.Application.Authentication.Common;
 

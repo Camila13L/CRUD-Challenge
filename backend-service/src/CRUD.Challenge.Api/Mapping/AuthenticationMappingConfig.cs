@@ -1,5 +1,4 @@
-﻿using System;
-using CRUD.Challenge.Application.Authentication.Commands.Register;
+﻿using CRUD.Challenge.Application.Authentication.Commands.Register;
 using CRUD.Challenge.Application.Authentication.Common;
 using CRUD.Challenge.Application.Authentication.Queries.Login;
 using CRUD.Challenge.Contracts.Authentication;
