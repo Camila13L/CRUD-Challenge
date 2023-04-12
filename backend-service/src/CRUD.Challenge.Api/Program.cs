@@ -11,13 +11,14 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
     .AddInfrastructure(builder.Configuration);
 }
 
-//builder.Services.AddSingleton<ProblemDetailsFactory,CRUDChallengeProblemDetailsFactory>();
 var app = builder.Build();
 {
 
     app.UseExceptionHandler("/error");
 
     app.UseHttpsRedirection();
+
+    app.UseAuthentication();
 
     app.UseAuthorization();
 

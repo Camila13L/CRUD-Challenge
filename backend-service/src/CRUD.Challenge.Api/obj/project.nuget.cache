@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "matqf705nvUNvlllu4ZGhXaYWI/TfOZTf/BPWBRv9GFEv2d0B43hHmjQYTxgiaox2c0bZk0pIEHNQJ6oBarh7g==",
+  "dgSpecHash": "X0HlCQnTjTn/rfg2PEM9u2QgQKfqRv0d2ZI1bI/KvmLpvhL8Fu0WRoXVW7i41OB/dFAFuY7waK5mDvQJx+/Mfg==",
   "success": true,
   "projectFilePath": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Api/CRUD.Challenge.Api.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "/Users/saracamilalauramanzaneda/.nuget/packages/mediatr/11.1.0/mediatr.11.1.0.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "/Users/saracamilalauramanzaneda/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/6.0.16/microsoft.aspnetcore.authentication.jwtbearer.6.0.16.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/microsoft.aspnetcore.http/2.2.2/microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.2.0/microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/microsoft.aspnetcore.http.features/2.2.0/microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
@@ -33,6 +34,8 @@
     "/Users/saracamilalauramanzaneda/.nuget/packages/microsoft.identitymodel.abstractions/6.28.1/microsoft.identitymodel.abstractions.6.28.1.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.28.1/microsoft.identitymodel.jsonwebtokens.6.28.1.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/microsoft.identitymodel.logging/6.28.1/microsoft.identitymodel.logging.6.28.1.nupkg.sha512",
+    "/Users/saracamilalauramanzaneda/.nuget/packages/microsoft.identitymodel.protocols/6.10.0/microsoft.identitymodel.protocols.6.10.0.nupkg.sha512",
+    "/Users/saracamilalauramanzaneda/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.10.0/microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/microsoft.identitymodel.tokens/6.28.1/microsoft.identitymodel.tokens.6.28.1.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/microsoft.net.http.headers/2.2.0/microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
