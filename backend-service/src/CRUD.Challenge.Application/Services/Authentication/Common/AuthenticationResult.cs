@@ -1,7 +1,7 @@
 ﻿using System;
 using CRUD.Challenge.Domain.Entites;
 
-namespace CRUD.Challenge.Application.Services.Authentication;
+namespace CRUD.Challenge.Application.Services.Authentication.Common;
 
 public record AuthenticationResult
 (

@@ -19,6 +19,15 @@
     <None Remove="Common\Interfaces\Persistence\" />
     <None Remove="Common\Errors\" />
     <None Remove="Common\Interfaces\Errors\" />
+    <None Remove="Services\Authentication\Queries\" />
+    <None Remove="Services\Authentication\Commands\" />
+    <None Remove="Services\Authentication\Common\" />
+    <None Remove="Authentication\" />
+    <None Remove="Authentication\Commands\" />
+    <None Remove="Authentication\Commands\Register\" />
+    <None Remove="Authentication\Queries\" />
+    <None Remove="Authentication\Queries\Login\" />
+    <None Remove="Authentication\Common\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
@@ -30,9 +39,19 @@
     <Folder Include="Common\Errors\" />
     <Folder Include="Common\Interfaces\Errors\" />
     <Folder Include="Common\Errors\" />
+    <Folder Include="Services\Authentication\Queries\" />
+    <Folder Include="Services\Authentication\Commands\" />
+    <Folder Include="Services\Authentication\Common\" />
+    <Folder Include="Authentication\" />
+    <Folder Include="Authentication\Commands\" />
+    <Folder Include="Authentication\Commands\Register\" />
+    <Folder Include="Authentication\Queries\" />
+    <Folder Include="Authentication\Queries\Login\" />
+    <Folder Include="Authentication\Common\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
     <PackageReference Include="FluentResults" Version="3.15.2" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="MediatR" Version="11.1.0" />
   </ItemGroup>
 </Project>

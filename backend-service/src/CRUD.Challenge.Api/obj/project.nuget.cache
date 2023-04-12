@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "RbbViYs+IAVPVAcqw7yKvj+6EGbyOJlAbKWDT0+Q49HsJYAjaBYQJkwvpB66IeGEjwNZamR6AUaE38P+gUno1w==",
+  "dgSpecHash": "5/fa4ZFJZalA3TGBhJu1wWWXwsiXqO84ruGXSlYgyUJDur6aTbagFZI2hs2u0FI9CWO51jt4DbcT05MUDNo9QQ==",
   "success": true,
   "projectFilePath": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Api/CRUD.Challenge.Api.csproj",
   "expectedPackageFiles": [
     "/Users/saracamilalauramanzaneda/.nuget/packages/erroror/1.2.1/erroror.1.2.1.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/fluentresults/3.15.2/fluentresults.3.15.2.nupkg.sha512",
+    "/Users/saracamilalauramanzaneda/.nuget/packages/mediatr/11.1.0/mediatr.11.1.0.nupkg.sha512",
+    "/Users/saracamilalauramanzaneda/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
+    "/Users/saracamilalauramanzaneda/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/microsoft.aspnetcore.http/2.2.2/microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.2.0/microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "/Users/saracamilalauramanzaneda/.nuget/packages/microsoft.aspnetcore.http.features/2.2.0/microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
