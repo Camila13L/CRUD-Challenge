@@ -21,9 +21,7 @@ public static class ServiceExtension
 	{
         services.AddMediatR(typeof(ServiceExtension).Assembly);
 
-        services.AddScoped<
-            IPipelineBehavior<RegisterCommand, ErrorOr<AuthenticationResult>>,
-            ValidationBehavior>();
+        services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
