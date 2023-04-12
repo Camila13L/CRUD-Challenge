@@ -1,6 +1,6 @@
+using CRUD.Challenge.Api;
 using CRUD.Challenge.Api.Errors;
 using CRUD.Challenge.Api.Filters;
-//using CRUD.Challenge.Api.Middleware;
 using CRUD.Challenge.Application;
 using CRUD.Challenge.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -14,6 +14,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen();
 builder.Services
+    .AddPresentation()
     .AddApplication()
     .AddInfrastructure(builder.Configuration);
 

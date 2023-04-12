@@ -15,6 +15,7 @@ using CRUD.Challenge.Contracts.Authentication;
 using CRUD.Challenge.Domain.Common.Errors;
 using ErrorOr;
 using FluentResults;
+using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
@@ -24,27 +25,24 @@ namespace CRUD.Challenge.Api.Controllers;
 public class AuthenticationController : ApiController
 {
     private readonly ISender _mediatR;
+    private readonly IMapper _mapper;
 
-    public AuthenticationController(ISender mediatR)
+    public AuthenticationController(ISender mediatR, IMapper mapper)
     {
         _mediatR = mediatR;
+        _mapper = mapper;
     }
 
     [HttpPost("register")]
     public async Task<IActionResult> Register(ResgisterRequest request)
     {
-        RegisterCommand command = new RegisterCommand(
-        request.FirstName,
-        request.LastName,
-        request.Email,
-        request.Password
-        );
+        RegisterCommand command = _mapper.Map<RegisterCommand>(request);
 
         ErrorOr<AuthenticationResult> registerResult = await _mediatR.Send(command);
 
 
         return registerResult.Match(
-            autResult => Ok(MapAuthResult(autResult)),
+            autResult => Ok(_mapper.Map<AuthenticationResponse>(autResult)),
             errors => Problem(errors)
             );
       
@@ -53,7 +51,7 @@ public class AuthenticationController : ApiController
     [HttpPost("login")]
     public async Task<IActionResult> Login(LoginRequest request)
     {
-        LoginQuery query = new LoginQuery(request.Email, request.Password);
+        LoginQuery query = _mapper.Map<LoginQuery>(request);
 
         ErrorOr<AuthenticationResult> loginResult = await _mediatR.Send(query);
 
@@ -63,24 +61,9 @@ public class AuthenticationController : ApiController
         }
 
         return loginResult.Match(
-              autResult => Ok(MapAuthResult(autResult)),
+              autResult => Ok(_mapper.Map<AuthenticationResponse>(autResult)),
               errors => Problem(errors.ToList())
              );
-    }
-
-    private static AuthenticationResponse MapAuthResult(AuthenticationResult authresult)
-    {
-         AuthenticationResponse authenticationResponse = 
-         new AuthenticationResponse
-                        (
-                        authresult.user.Id,
-                        authresult.user.FirstName,
-                        authresult.user.LastName,
-                        authresult.user.Email,
-                        authresult.token
-                        );
-
-        return authenticationResponse;
     }
 }
 

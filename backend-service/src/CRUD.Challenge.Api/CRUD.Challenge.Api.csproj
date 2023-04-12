@@ -12,6 +12,8 @@
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Mapster" Version="7.3.0" />
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +36,7 @@
     <None Remove="Common\" />
     <None Remove="Common\Errors\" />
     <None Remove="Common\Http\" />
+    <None Remove="Mapping\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Middleware\" />
@@ -41,5 +44,6 @@
     <Folder Include="Common\" />
     <Folder Include="Common\Errors\" />
     <Folder Include="Common\Http\" />
+    <Folder Include="Mapping\" />
   </ItemGroup>
 </Project>

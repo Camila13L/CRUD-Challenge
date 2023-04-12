@@ -5,6 +5,6 @@ namespace CRUD.Challenge.Application.Authentication.Common;
 
 public record AuthenticationResult
 (
-    User user,
-    string token
+    User User,
+    string Token
 );
