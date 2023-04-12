@@ -11,7 +11,7 @@ namespace CRUD.Challenge.Api.Controllers;
 [ApiController]
 public class ApiController : ControllerBase
 {
-    protected IActionResult Problem(List<Error> errors)
+    protected IActionResult ProblemX(List<Error> errors)
     {
         if (errors.All(error => error.Type == ErrorType.Validation))
         {
@@ -19,13 +19,13 @@ public class ApiController : ControllerBase
 
             foreach (var error in errors)
             {
-                modelStateDictionary.AddModelError(error.Code, error.Description);
+                var key = error.Code;
+                var value = error.Description;
+                modelStateDictionary.AddModelError(key,value);
             }
 
             return ValidationProblem(modelStateDictionary);
         }
-
-
 
         HttpContext.Items["errors"] = errors;
         Error firstError = errors[0];
@@ -36,7 +36,8 @@ public class ApiController : ControllerBase
             ErrorType.NotFound => StatusCodes.Status404NotFound,
             _ => StatusCodes.Status500InternalServerError
         };
-        return Problem(); 
+
+        return Problem(statusCode: statusCode, title: firstError.Description); 
     }
 }
 

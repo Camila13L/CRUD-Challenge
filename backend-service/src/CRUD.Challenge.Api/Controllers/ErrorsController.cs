@@ -9,10 +9,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CRUD.Challenge.Api.Controllers;
 
+
 public class ErrorsController : ControllerBase
 {
     [Route("/error")]
-    public IActionResult Error()
+    public IActionResult GetError()
     {
         Exception? exception = HttpContext.Features.Get<IExceptionHandlerFeature>()?.Error;
 
