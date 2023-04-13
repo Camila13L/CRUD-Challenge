@@ -11,11 +11,25 @@
     <None Remove="Common\" />
     <None Remove="Common\Errors\" />
     <None Remove="Common\Errors\Erros.User" />
+    <None Remove="Common\Models\" />
+    <None Remove="Menu\" />
+    <None Remove="Menu\ValueObjects\" />
+    <None Remove="Menu\Entities\" />
+    <None Remove="Dinner\" />
+    <None Remove="Host\" />
+    <None Remove="Dinner\Entities\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entites\" />
     <Folder Include="Common\" />
     <Folder Include="Common\Errors\" />
+    <Folder Include="Common\Models\" />
+    <Folder Include="Menu\" />
+    <Folder Include="Menu\ValueObjects\" />
+    <Folder Include="Menu\Entities\" />
+    <Folder Include="Dinner\" />
+    <Folder Include="Host\" />
+    <Folder Include="Dinner\Entities\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ErrorOr" Version="1.2.1" />
