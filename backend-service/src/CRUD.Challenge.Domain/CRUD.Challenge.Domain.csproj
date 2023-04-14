@@ -17,10 +17,11 @@
     <None Remove="Menu\Entities\" />
     <None Remove="Dinner\" />
     <None Remove="Host\" />
-    <None Remove="Dinner\Entities\" />
+    <None Remove="Dinner\ObjectValues\" />
+    <None Remove="Host\ObjectValues\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entites\" />
+    <Folder Include="User\" />
     <Folder Include="Common\" />
     <Folder Include="Common\Errors\" />
     <Folder Include="Common\Models\" />
@@ -29,7 +30,8 @@
     <Folder Include="Menu\Entities\" />
     <Folder Include="Dinner\" />
     <Folder Include="Host\" />
-    <Folder Include="Dinner\Entities\" />
+    <Folder Include="Dinner\ObjectValues\" />
+    <Folder Include="Host\ObjectValues\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ErrorOr" Version="1.2.1" />
