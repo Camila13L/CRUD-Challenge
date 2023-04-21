@@ -36,7 +36,7 @@
     <None Remove="Common\" />
     <None Remove="Common\Errors\" />
     <None Remove="Common\Http\" />
-    <None Remove="Mapping\" />
+    <None Remove="Common\Mapping\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Middleware\" />
@@ -44,6 +44,6 @@
     <Folder Include="Common\" />
     <Folder Include="Common\Errors\" />
     <Folder Include="Common\Http\" />
-    <Folder Include="Mapping\" />
+    <Folder Include="Common\Mapping\" />
   </ItemGroup>
 </Project>
