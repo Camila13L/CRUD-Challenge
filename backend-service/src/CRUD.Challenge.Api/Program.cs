@@ -1,35 +1,28 @@
-using CRUD.Challenge.Api.Errors;
-using CRUD.Challenge.Api.Filters;
-//using CRUD.Challenge.Api.Middleware;
+using CRUD.Challenge.Api;
 using CRUD.Challenge.Application;
 using CRUD.Challenge.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
-
-
-builder.Services.AddControllers();
-//options => options.Filters.Add<ErrorHandlingfilterAttribute>()
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services
+{
+    builder.Services
+    .AddPresentation()
     .AddApplication()
     .AddInfrastructure(builder.Configuration);
-builder.Services.AddSingleton<ProblemDetailsFactory,CRUDChallengeProblemDetailsFactory>();
-var app = builder.Build();
-
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
 }
 
-// app.UseMiddleware<ErrorHandlingMiddleware>();
-app.UseExceptionHandler("/error");
-app.UseHttpsRedirection();
+//builder.Services.AddSingleton<ProblemDetailsFactory,CRUDChallengeProblemDetailsFactory>();
+var app = builder.Build();
+{
 
-app.UseAuthorization();
+    app.UseExceptionHandler("/error");
 
-app.MapControllers();
+    app.UseHttpsRedirection();
 
-app.Run();
+    app.UseAuthorization();
+
+    app.MapControllers();
+
+    app.Run();
+}
+

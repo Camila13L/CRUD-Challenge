@@ -12,6 +12,8 @@
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Mapster" Version="7.3.0" />
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,15 +26,24 @@
     <ProjectReference Include="..\CRUD.Challenge.Infrastructure\CRUD.Challenge.Infrastructure.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\CRUD.Challenge.Domain\CRUD.Challenge.Domain.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Remove="Middleware\" />
     <None Remove="Filters\" />
-    <None Remove="Errors\" />
+    <None Remove="Common\" />
+    <None Remove="Common\Errors\" />
+    <None Remove="Common\Http\" />
+    <None Remove="Common\Mapping\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Middleware\" />
     <Folder Include="Filters\" />
-    <Folder Include="Errors\" />
+    <Folder Include="Common\" />
+    <Folder Include="Common\Errors\" />
+    <Folder Include="Common\Http\" />
+    <Folder Include="Common\Mapping\" />
   </ItemGroup>
 </Project>

@@ -33,6 +33,9 @@
               "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Contracts/CRUD.Challenge.Contracts.csproj": {
                 "projectPath": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Contracts/CRUD.Challenge.Contracts.csproj"
               },
+              "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Domain/CRUD.Challenge.Domain.csproj": {
+                "projectPath": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Domain/CRUD.Challenge.Domain.csproj"
+              },
               "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/CRUD.Challenge.Infrastructure.csproj": {
                 "projectPath": "/Users/saracamilalauramanzaneda/Documents/GERMANY/backend-service/src/CRUD.Challenge.Infrastructure/CRUD.Challenge.Infrastructure.csproj"
               }
@@ -49,6 +52,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.3.0, )"
+            },
+            "Mapster.DependencyInjection": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
               "version": "[2.2.2, )"
@@ -123,9 +134,25 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+            "FluentResults": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[3.15.2, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.5.2, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
             }
           },
           "imports": [
@@ -236,6 +263,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "ErrorOr": {
+              "target": "Package",
+              "version": "[1.2.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
